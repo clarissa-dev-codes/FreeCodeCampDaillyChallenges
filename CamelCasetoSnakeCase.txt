@@ -1,0 +1,14 @@
+** start of main.py **
+
+import re
+
+def to_snake(camel):
+    
+    toSplit = re.sub(r'(?<=[a-z])(?=[A-Z])', r'_', camel)
+
+
+    camel = toSplit.lower()
+    return camel
+
+** end of main.py **
+
