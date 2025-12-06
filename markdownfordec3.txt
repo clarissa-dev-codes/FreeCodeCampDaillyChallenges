@@ -1,0 +1,22 @@
+** start of main.py **
+
+import re
+
+def convert_list_item(markdown):
+    text = markdown.lstrip()    
+
+    #match = re.match(r"^\s*(\d+)\.\s+(.*)$", markdown_string)
+
+    text = re.match(r"^(\d+)\.\s+(.*)$",text)
+
+
+    if text:
+        final = text.group(2)
+        markdown = f"<li>{final}</li>"
+        return markdown
+    else:
+        return "Invalid format"
+    
+
+** end of main.py **
+
